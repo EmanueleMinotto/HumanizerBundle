@@ -1,0 +1,46 @@
+--TEST--
+"difference" filter
+--TEMPLATE--
+{% for item in items %}
+    {{- item[0]|difference(item[1]) }}
+{% endfor %}
+--DATA--
+return [
+    'items' => [
+        [new \DateTime("2014-04-26 13:00:00"), new \DateTime("2014-04-26 13:00:00")],
+        [new \DateTime("2014-04-26 13:00:00"), new \DateTime("2014-04-26 13:00:05")],
+        [new \DateTime("2014-04-26 13:00:00"), new \DateTime("2014-04-26 12:59:00")],
+        [new \DateTime("2014-04-26 13:00:00"), new \DateTime("2014-04-26 12:45:00")],
+        [new \DateTime("2014-04-26 13:00:00"), new \DateTime("2014-04-26 13:15:00")],
+        [new \DateTime("2014-04-26 13:00:00"), new \DateTime("2014-04-26 14:00:00")],
+        [new \DateTime("2014-04-26 13:00:00"), new \DateTime("2014-04-26 15:00:00")],
+        [new \DateTime("2014-04-26 13:00:00"), new \DateTime("2014-04-26 12:00:00")],
+        [new \DateTime("2014-04-26"), new \DateTime("2014-04-25")],
+        [new \DateTime("2014-04-26"), new \DateTime("2014-04-24")],
+        [new \DateTime("2014-04-26"), new \DateTime("2014-04-28")],
+        [new \DateTime("2014-04-01"), new \DateTime("2014-04-15")],
+        [new \DateTime("2014-04-15"), new \DateTime("2014-04-07")],
+        [new \DateTime("2014-01-01"), new \DateTime("2014-04-01")],
+        [new \DateTime("2014-05-01"), new \DateTime("2014-04-01")],
+        [new \DateTime("2015-05-01"), new \DateTime("2014-04-01")],
+        [new \DateTime("2014-05-01"), new \DateTime("2016-04-01")],
+    ],
+]
+--EXPECT--
+just now
+5 seconds from now
+1 minute ago
+15 minutes ago
+15 minutes from now
+1 hour from now
+2 hours from now
+1 hour ago
+1 day ago
+2 days ago
+2 days from now
+2 weeks from now
+1 week ago
+3 months from now
+1 month ago
+1 year ago
+2 years from now

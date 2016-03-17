@@ -1,0 +1,12 @@
+--TEST--
+"to_roman" filter
+--TEMPLATE--
+{{ 1|to_roman }}
+{{ 5|to_roman }}
+{{ 1300|to_roman }}
+--DATA--
+return []
+--EXPECT--
+I
+V
+MCCC

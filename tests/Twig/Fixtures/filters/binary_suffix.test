@@ -1,0 +1,24 @@
+--TEST--
+"binary_suffix" filter
+--TEMPLATE--
+{{ 0|binary_suffix }}
+{{ 1|binary_suffix }}
+{{ 1024|binary_suffix }}
+{{ 1025|binary_suffix }}
+{{ 1536|binary_suffix }}
+{{ (1048576 * 5)|binary_suffix }}
+{{ (1073741824 * 2)|binary_suffix }}
+{{ (1099511627776 * 3)|binary_suffix }}
+{{ 1325899906842624|binary_suffix }}
+--DATA--
+return []
+--EXPECT--
+0 bytes
+1 bytes
+1 kB
+1 kB
+1.5 kB
+5 MB
+2 GB
+3 TB
+1.18 PB

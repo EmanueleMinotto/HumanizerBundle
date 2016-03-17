@@ -1,0 +1,22 @@
+--TEST--
+"metric_suffix" filter
+--TEMPLATE--
+{{ -1|metric_suffix }}
+{{ 0|metric_suffix }}
+{{ 1|metric_suffix }}
+{{ 101|metric_suffix }}
+{{ 1000|metric_suffix }}
+{{ 1240|metric_suffix }}
+{{ 1240000|metric_suffix }}
+{{ 3500000|metric_suffix }}
+--DATA--
+return []
+--EXPECT--
+-1
+0
+1
+101
+1k
+1.2k
+1.24M
+3.5M

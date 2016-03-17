@@ -1,0 +1,10 @@
+--TEST--
+"precise_binary_suffix" filter
+--TEMPLATE--
+{{ 1024|precise_binary_suffix(2) }}
+{{ 1325899906842624|precise_binary_suffix(3) }}
+--DATA--
+return []
+--EXPECT--
+1.00 kB
+1.178 PB

@@ -1,0 +1,12 @@
+--TEST--
+"humanize" filter
+--TEMPLATE--
+{{ 'field_name'|humanize }}
+{{ 'user_id'|humanize }}
+{{ 'field_name'|humanize(false) }}
+--DATA--
+return []
+--EXPECT--
+Field name
+User id
+field name

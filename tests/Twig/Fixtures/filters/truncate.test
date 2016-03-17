@@ -1,0 +1,16 @@
+--TEST--
+"truncate" filter
+--TEMPLATE--
+{{ text|truncate(8) }}
+{{ text|truncate(8, '...') }}
+{{ text|truncate(2) }}
+{{ text|truncate(text|length) }}
+--DATA--
+return [
+    'text' => 'Lorem ipsum dolorem si amet, lorem ipsum. Dolorem sic et nunc.',
+]
+--EXPECT--
+Lorem ipsum
+Lorem ipsum...
+Lorem
+Lorem ipsum dolorem si amet, lorem ipsum. Dolorem sic et nunc.

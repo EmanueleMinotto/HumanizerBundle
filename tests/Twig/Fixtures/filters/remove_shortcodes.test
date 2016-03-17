@@ -1,0 +1,10 @@
+--TEST--
+"remove_shortcodes" filter
+--TEMPLATE--
+{{ 'some [text] containing [shortcodes /] and [stuff]with[/stuff] content'|remove_shortcodes }}
+{{ 'some [text] containing [shortcodes /] and [stuff]with[/stuff] content [/text] -'|remove_shortcodes }}
+--DATA--
+return []
+--EXPECT--
+some  containing  and  content
+some  -

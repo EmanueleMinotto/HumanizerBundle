@@ -1,0 +1,52 @@
+{
+    "authors": [
+        {
+            "email": "minottoemanuele@gmail.com",
+            "name": "Emanuele Minotto"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EmanueleMinotto\\HumanizerBundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EmanueleMinotto\\HumanizerBundle\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "description": "Symfony Bundle for coduo/php-humanizer",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "keywords": [
+        "humanizer",
+        "bundle",
+        "twig"
+    ],
+    "license": "MIT",
+    "name": "emanueleminotto/humanizer-bundle",
+    "require": {
+        "php": "^5.4|^7.0",
+        "coduo/php-humanizer": "^2.0@beta",
+        "symfony/framework-bundle": "^2.3|^3.0",
+        "symfony/twig-bundle": "^2.0.9|^3.0",
+        "twig/twig": "^1.23.1"
+    },
+    "require-dev": {
+        "matthiasnoback/symfony-dependency-injection-test": "^0.7.6",
+        "phpunit/phpunit": "^4.0|^5.0",
+        "scrutinizer/ocular": "^1.3",
+        "squizlabs/php_codesniffer": "^2.5",
+        "thunderer/shortcode": "^0.6.1"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "type": "symfony-bundle"
+}

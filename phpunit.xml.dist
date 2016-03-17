@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false" backupStaticAttributes="false" bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false" stopOnFailure="false" verbose="true">
+    <testsuites>
+        <testsuite name="HumanizerBundle Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log target="build/report.tap" type="tap"/>
+        <log target="build/report.junit.xml" type="junit"/>
+        <log charset="UTF-8" highlight="true" target="build/coverage" type="coverage-html" yui="true"/>
+        <log target="build/coverage.txt" type="coverage-text"/>
+        <log target="build/logs/clover.xml" type="coverage-clover"/>
+    </logging>
+</phpunit>

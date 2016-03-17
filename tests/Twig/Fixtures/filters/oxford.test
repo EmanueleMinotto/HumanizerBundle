@@ -1,0 +1,12 @@
+--TEST--
+"oxford" filter
+--TEMPLATE--
+{{ ['Michal', 'Norbert', 'Lukasz', 'Pawel']|oxford(2) }}
+{{ ['Michal', 'Norbert', 'Lukasz']|oxford(2) }}
+{{ ['Michal', 'Norbert']|oxford }}
+--DATA--
+return []
+--EXPECT--
+Michal, Norbert, and 2 others
+Michal, Norbert, and 1 other
+Michal and Norbert

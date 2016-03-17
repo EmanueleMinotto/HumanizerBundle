@@ -1,0 +1,16 @@
+--TEST--
+"ordinalize" filter
+--TEMPLATE--
+{{ 0|ordinalize }}
+{{ 1|ordinalize }}
+{{ 2|ordinalize }}
+{{ 23|ordinalize }}
+{{ (-111)|ordinalize }}
+--DATA--
+return []
+--EXPECT--
+0th
+1st
+2nd
+23rd
+-111th

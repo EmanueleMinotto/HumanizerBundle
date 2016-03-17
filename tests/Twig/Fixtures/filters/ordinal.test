@@ -1,0 +1,16 @@
+--TEST--
+"ordinal" filter
+--TEMPLATE--
+{{ 0|ordinal }}
+{{ 1|ordinal }}
+{{ 2|ordinal }}
+{{ 23|ordinal }}
+{{ 1002|ordinal }}
+--DATA--
+return []
+--EXPECT--
+th
+st
+nd
+rd
+nd

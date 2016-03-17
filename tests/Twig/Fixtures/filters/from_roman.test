@@ -1,0 +1,12 @@
+--TEST--
+"from_roman" filter
+--TEMPLATE--
+{{ 'MMMCMXCIX'|from_roman }}
+{{ 'V'|from_roman }}
+{{ 'CXXV'|from_roman }}
+--DATA--
+return []
+--EXPECT--
+3999
+5
+125
