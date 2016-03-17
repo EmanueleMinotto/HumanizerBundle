@@ -20,7 +20,6 @@ class HumanizerExtensionTest extends AbstractExtensionTestCase
         ];
     }
 
-
     /**
      * Test services definition.
      *
@@ -48,19 +47,19 @@ class HumanizerExtensionTest extends AbstractExtensionTestCase
         return [
             [
                 'humanizer_bundle.twig.collection_humanizer_extension',
-                Twig\CollectionHumanizerExtension::class
+                Twig\CollectionHumanizerExtension::class,
             ],
             [
                 'humanizer_bundle.twig.datetime_humanizer_extension',
-                Twig\DateTimeHumanizerExtension::class
+                Twig\DateTimeHumanizerExtension::class,
             ],
             [
                 'humanizer_bundle.twig.number_humanizer_extension',
-                Twig\NumberHumanizerExtension::class
+                Twig\NumberHumanizerExtension::class,
             ],
             [
                 'humanizer_bundle.twig.string_humanizer_extension',
-                Twig\StringHumanizerExtension::class
+                Twig\StringHumanizerExtension::class,
             ],
         ];
     }
