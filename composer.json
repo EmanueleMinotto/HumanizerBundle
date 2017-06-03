@@ -36,7 +36,7 @@
         "coduo/php-humanizer": "^2.0@beta",
         "symfony/framework-bundle": "^2.3|^3.0",
         "symfony/twig-bundle": "^2.0.9|^3.0",
-        "twig/twig": "^1.23.1"
+        "twig/twig": "^1.23.1|^2.0"
     },
     "require-dev": {
         "matthiasnoback/symfony-dependency-injection-test": "^0.7.6",
