@@ -33,7 +33,7 @@
     "name": "emanueleminotto/humanizer-bundle",
     "require": {
         "php": "^5.5|^7.0",
-        "coduo/php-humanizer": "^2.0@beta",
+        "coduo/php-humanizer": "^2.0",
         "symfony/framework-bundle": "^2.3|^3.0",
         "symfony/twig-bundle": "^2.0.9|^3.0",
         "twig/twig": "^1.23.1"
